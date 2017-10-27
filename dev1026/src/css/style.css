@@ -1,0 +1,77 @@
+body {
+	background: url(./../img/slice/bg001.png);
+	position: relative;
+	// font-size: .32rem;
+	font-size: .34rem;
+	color: #fff;
+	line-height: 1;
+	height: 100%;
+	font-family: "Microsoft YaHei", "微软雅黑";
+}
+html {
+	height: 100%;
+}
+.yellow {
+	color: #fbe466!important;
+}
+.red {
+	color: #f3575f!important;
+}
+.container {
+	width: 6.4rem;
+	margin: 0 auto;
+}
+.icon002 {
+	background: url(../img/slice/icon002.png) no-repeat;
+	width: 1.44rem;
+	height: .98rem;
+	background-size: 100% 100%;
+	position: absolute;
+	top: .4rem;
+	right: 0;
+}
+.p1 {
+	margin: .5rem 0 .4rem 0;
+}
+.p2, .p3{
+	line-height: .98rem;
+}
+.btn {
+	font-size: .3rem;
+	text-align: center;
+	color: #2f2e2e;
+	line-height: .66rem;
+	background: url(../img/slice/icon004-no.png) no-repeat;
+	background-size: 100% 100%;
+	width: 3.02rem;
+	height: .78rem;
+	// margin: 0 auto 1.27rem;
+	// position: absolute;
+	position: relative;
+	left: 50%;
+	margin-left: -1.51rem;
+	margin-top: .7rem;
+}
+.icon003 {
+	background: url(../img/slice/icon003.png);
+	width: 2.1rem;
+	height: 1.56rem;
+	background-size: 100%;
+	// position: absolute;
+	// left: 0;
+	// bottom: 0;
+	    margin-top: -.23rem;
+}
+
+
+@media screen and (min-width: 769px){
+	body {
+		width: 750px;
+		height: 1400px;
+		margin: 0 auto;
+		border: 2px solid #666;
+	}
+	html {
+		font-size: 100px !important;
+	}
+}
