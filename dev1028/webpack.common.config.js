@@ -2,7 +2,6 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const webpack = require('webpack');
-// import style from './src/css/style.css'
 
 module.exports = {
 	entry: {
@@ -32,7 +31,7 @@ module.exports = {
 						loader: 'postcss-loader'
 					},
 					{
-						loader: 'less-loader' // compiles Less to CSS
+						loader: 'less-loader'
 					}
 				]
 			},
