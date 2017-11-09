@@ -6,3 +6,4 @@ cd dev1027
 npm install   
 npm run dev -> for dev   
 npm run build -> for production
+
