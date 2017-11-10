@@ -1,0 +1,87 @@
+html, body, div, h2, h3, h4, p, td, tr, ul, ol, li, table, dl, dd, dt, img, form { margin: 0; padding: 0; box-sizing: border-box;}
+body, button, input, select, textarea { 
+	font: 12px/1 "Hiragino Sans GB","冬青黑体",STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
+	color: #333;
+}
+h1, h2, h3, h4, h5, h6 { font-size: 100%;}
+ol, ul { list-style: none;}
+table { border-collapse: collapse; border-spacing: 0;}
+fieldset, img { border: 0;}
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+input, textarea {
+	outline: none;
+}
+textarea {
+	resize: none;
+}
+a { text-decoration: none; color: inherit;}
+.clearfix { *zoom: 1;}   
+.clearfix:before, .clearfix:after { display: table; content: "";}
+.clearfix:after { clear: both;}
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+/* 去掉ios点击产生的阴影 */
+*{-webkit-tap-highlight-color: rgba(0,0,0,0);-webkit-tap-highlight-color:transparent;}
+
+/*自定义样式*/
+.ellipsis {
+	white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.bw {background: white;}
+.bb {background: black;}
+.br {background: red;}
+.br1 {border-radius: 1px;}
+.br2 {border-radius: 2px;}
+.br3 {border-radius: 3px;}
+.br4 {border-radius: 4px;}
+/*圆形*/
+.br50 {border-radius: 50%;}
+.cw { color: white;}
+.cb { color: black;}
+.cp { cursor: pointer;}
+.dn { display: none;}
+.db { display: block;}
+.dib { display: inline-block;}
+.di { display: inline;}
+.fl { float: left;}
+.fr { float: right;}
+.fwb { font-weight: bold;}
+.fwn { font-weight: normal;}
+.m0a { margin: 0 auto;}
+.pr { position:  relative;}
+.pa { position:  absolute;}
+.tac { text-align: center;}
+.tal { text-align: left;}
+.tar { text-align: right;}
+.fs12 { font-size: 12px;}
+.fs13 { font-size: 13px;}
+.fs14 { font-size: 14px;}
+.fs15 { font-size: 15px;}
+.fs16 { font-size: 16px;}
+.fs17 { font-size: 17px;}
+.fs18 { font-size: 18px;}
+.fs19 { font-size: 19px;}
+.fs20 { font-size: 20px;}
+.fs21 { font-size: 21px;}
+.fs22 { font-size: 22px;}
+.fs23 { font-size: 23px;}
+.fs24 { font-size: 24px;}
+.fs25 { font-size: 25px;}
+.fs26 { font-size: 26px;}
+.fs27 { font-size: 27px;}
+.fs28 { font-size: 28px;}
+.fs29 { font-size: 29px;}
+.fs30 { font-size: 30px;}
+.fs100 { font-size: 100%;}
+.oh {overflow: hidden;}
+.g-ellipsis {
+	white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
