@@ -6,6 +6,8 @@
 		doc = d.documentElement,
 		ps = 'pageshow';
 
+		var y = 90;
+
 	d[on]('DOMContentLoaded', resizeFontSize);
 
 	if ('on' + ps in w)
