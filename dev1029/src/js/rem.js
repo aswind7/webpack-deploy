@@ -1,4 +1,5 @@
 (function() {
+	var x = 312;
 	var timer,
 		on = 'addEventListener',
 		d = document,
@@ -7,6 +8,8 @@
 		ps = 'pageshow';
 
 		var y = 90;
+
+		var mm = 901;
 
 	d[on]('DOMContentLoaded', resizeFontSize);
 
