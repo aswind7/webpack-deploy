@@ -1,5 +1,5 @@
 (function() {
-	var x = 312;
+	var x = 23;
 	var timer,
 		on = 'addEventListener',
 		d = document,
