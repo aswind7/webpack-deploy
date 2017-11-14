@@ -6,35 +6,49 @@ const userSetting = require('./user-setting');
 
 const webpack_common_config = {
 	entry: {
-		app: './src/js/total.js'
+		app: './src/js/total.js',
+		vendor: ['lodash', 'axios']
 	},
 	module: {
-		rules: [{
-			test: /\.(html)$/,
-			use: {
-				loader: 'html-loader',
-				options: {
-					attrs: ['img:src']
+		rules: [
+			{
+				test: /\.(html)$/,
+				use: {
+					loader: 'html-loader',
+					options: {
+						attrs: ['img:src']
+					}
+				}
+			},
+			{
+				test: /\.(png|svg|jpg|jpeg|gif)$/,
+				use: [
+					{
+						loader: 'url-loader',
+						options: {
+							limit: '3000',
+							name: './img/[name].[hash].[ext]'
+						}
+					}
+				]
+			},
+			{
+				test: /\.js$/,
+				exclude: /(node_modules|bower_components)/,
+				use: {
+					loader: 'babel-loader'
 				}
 			}
-		}, {
-			test: /\.(png|svg|jpg|jpeg|gif)$/,
-			use: [{
-				loader: 'url-loader',
-				options: {
-					limit: '3000',
-					name: './img/[name].[hash].[ext]'
-				}
-			}]
-		}, {
-			test: /\.js$/,
-			exclude: /(node_modules|bower_components)/,
-			use: {
-				loader: 'babel-loader'
-			}
-		}]
+		]
 	},
 	plugins: [
+		new webpack.optimize.CommonsChunkPlugin({
+			name: 'vendor'
+		}),
+		new webpack.optimize.CommonsChunkPlugin({
+			name: 'manifest'
+		}),
+		new CleanWebpackPlugin(['dist']),
 		new webpack.DefinePlugin({
 			'process.env': {
 				NODE_ENV: JSON.stringify(process.env.NODE_ENV)
@@ -44,7 +58,7 @@ const webpack_common_config = {
 	],
 	output: {
 		path: path.resolve(__dirname, 'dist/'),
-		filename: 'js/[name].[chunkhash].js'
+		filename: 'js/[name].[hash].js'
 	}
 };
 
