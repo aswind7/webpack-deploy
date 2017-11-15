@@ -3,10 +3,13 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const webpack = require('webpack');
 const userSetting = require('./user-setting');
+function resolve(dir) {
+	return path.join(__dirname, dir);
+}
 
 const webpack_common_config = {
 	entry: {
-		app: './src/js/total.js',
+		app: './src/js/main.js',
 		vendor: ['lodash', 'axios']
 	},
 	module: {
@@ -19,6 +22,10 @@ const webpack_common_config = {
 						attrs: ['img:src']
 					}
 				}
+			},
+			{
+				test: /\.vue$/,
+				loader: 'vue-loader'
 			},
 			{
 				test: /\.(png|svg|jpg|jpeg|gif)$/,
@@ -59,6 +66,13 @@ const webpack_common_config = {
 	output: {
 		path: path.resolve(__dirname, 'dist/'),
 		filename: 'js/[name].[hash].js'
+	},
+	resolve: {
+		extensions: ['.js', '.vue', '.json'],
+		alias: {
+			vue$: 'vue/dist/vue.esm.js',
+			'@': resolve('src')
+		}
 	}
 };
 
