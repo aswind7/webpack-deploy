@@ -9,7 +9,7 @@ function resolve(dir) {
 
 const webpack_common_config = {
 	entry: {
-		app: './src/js/main.js',
+		app: './src/main.js',
 		vendor: ['lodash', 'axios']
 	},
 	module: {
