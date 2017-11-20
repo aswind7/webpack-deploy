@@ -55,6 +55,3 @@ window.onload = function() {
 		false
 	);
 };
-
-// 测试
-import test_foo from './test_foo.js';

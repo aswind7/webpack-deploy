@@ -34,7 +34,7 @@ const webpack_common_config = {
 						loader: 'url-loader',
 						options: {
 							limit: '3000',
-							name: './img/[name].[hash].[ext]'
+							name: './img/[name].[hash:7].[ext]'
 						}
 					}
 				]
